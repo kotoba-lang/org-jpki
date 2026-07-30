@@ -1,0 +1,20 @@
+{:paths ["src"]
+ :deps {io.github.kotoba-lang/org-ietf-asn1
+        {:git/url "https://github.com/kotoba-lang/org-ietf-asn1.git"
+         :git/sha "3704c75db3da21e1f1153cb7907411f0b7d9fa28"}
+        io.github.kotoba-lang/org-ietf-x509
+        {:git/url "https://github.com/kotoba-lang/org-ietf-x509.git"
+         :git/sha "9cbe0756319e558007fb3c1bbf7a15968b07dcd2"}
+        io.github.kotoba-lang/org-ietf-cms
+        {:git/url "https://github.com/kotoba-lang/org-ietf-cms.git"
+         :git/sha "bed620a69179ecb04f10af709c1949d7541b3feb"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {io.github.cognitect-labs/test-runner
+                      {:git/tag "v0.5.1" :git/sha "dfb30dd"}}
+         :main-opts ["-m" "cognitect.test-runner"]
+         :exec-fn cognitect.test-runner.api/test}
+  ;; clj-kondo as a Clojars lib (no Homebrew/system install needed).
+  :lint {:replace-deps {clj-kondo/clj-kondo {:mvn/version "2024.11.14"}}
+         :main-opts ["-m" "clj-kondo.main" "--lint" "src" "test"
+                     "--fail-level" "error"]}}}

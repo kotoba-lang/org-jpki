@@ -3,7 +3,7 @@
   置けないので、JPKI と同じ形（nonRepudiation のみ、基本4情報の otherName、
   J-LIS 風の発行者名）に作った合成証明書を使っている。したがってここで検証されて
   いるのは構造の読み取りと拒否条件であって、実カードとの相互運用性ではない。"
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [asn1.core :as asn1]
             [cms.core :as cms]

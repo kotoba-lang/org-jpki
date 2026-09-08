@@ -42,7 +42,7 @@
   それは実カードでの検証が済むまで未証明のままである。"
   (:require [asn1.core :as asn1]
             [asn1.oid :as oid]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [cms.core :as cms]
             [x509.core :as x509]))
 

@@ -50,8 +50,8 @@ JPKI の失効情報は**署名検証者として認定・届出をした事業�
 ## Test
 
 ```bash
-clojure -M:test
-clojure -M:lint
+kbb -M:test
+kbb -M:lint
 ```
 
 Apache-2.0.
